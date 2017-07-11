@@ -18,6 +18,18 @@ body{
     background-color: greenyellow;
 }
 
+.passed-popid{
+    background-color: darkred;
+}
+
+.future-popid{
+    background-color: aqua;
+}
+
+.requested-item{
+    background-color: red;
+}
+
 #takt-box{
     position: relative;
     float: left;
@@ -29,5 +41,5 @@ body{
 }
 
 #takt-produced{
-    
+
 }

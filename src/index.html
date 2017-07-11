@@ -12,7 +12,14 @@
 
     <h1>One Bin Project</h1>
 
-    <button onclick='test()'> TESTE 1 </button>
+    <input id='first-popid' type="text" name='first-popid' />
+    <button onclick='updateCurrentPopid()'> PRIMEIRO POPID </button>      
+    
+
+    <input id='input-test-1' type="text" name="input-test-1"/>
+    <input id='input-test-2' type="text" name="input-test-2"/>
+
+    <button onclick='verifySequence(10)'> TESTE 1 </button>
     <button onclick='test2()'> TESTE 2 </button>
     <button onclick='test3()'> TESTE 3 </button>
     <button onclick='test4()'> TESTE 4  </button>
@@ -31,17 +38,6 @@
         <div class='requested-item pending-item'> </div>
         <div class='requested-item delivered-item'> </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
     <script src='socket.io.js'></script>
