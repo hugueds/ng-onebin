@@ -1,0 +1,45 @@
+body{
+    margin: auto;
+}
+
+#popids-box { 
+    margin: auto;
+    width: 10%;
+    text-align: center; 
+    position: relative;
+    float: left;
+}
+
+.popid-row {
+    border: 2px solid black;    
+}
+
+.active-popid{
+    background-color: greenyellow;
+}
+
+.passed-popid{
+    background-color: darkred;
+}
+
+.future-popid{
+    background-color: aqua;
+}
+
+.requested-item{
+    background-color: red;
+}
+
+#takt-box{
+    position: relative;
+    float: left;
+    margin-left: 30%;
+}
+
+#takt-value{
+    font-size: 10vw;
+}
+
+#takt-produced{
+
+}
