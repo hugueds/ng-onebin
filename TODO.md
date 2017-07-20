@@ -13,12 +13,15 @@
 
 ### Funcionamento
 * Estrategia para diminuição de uma peça -> Quando produzido alterar
-* Scanner para o montador?
+* Scanner para o montador dar baixa?
 * Connectar aplicação com o server que armazena os dados do PLC / Criar nova conexão para pegar valores do Takt / Criar memória que só armazene instâncias do Takt [x]
+* 
 
 ## Scania IT
 * Jira para a criação do contrato cimi para a FA0 [x]
 * Jira para criar service que receba parametros para a impressão da folha com Popid e Chassis [] 
+* Fazer relação entre produtos que entram e mix do dia
+* Desenvolver
 
 
 ### Outros
