@@ -1,0 +1,21 @@
+{
+    "stations":
+    [
+        {
+            "name": "PMTQ",
+            "description": "Pre Montagem Tanques",
+            "boxes":
+            [
+                {
+                    "boxNumber": 0,
+                    "cu": 123456,
+                    "partNumber": 654987,
+                    "maxQuantity": 20,
+                    "warning": 10,
+                    "cimi": "52972"
+                }
+            ]
+
+        }
+    ]
+}

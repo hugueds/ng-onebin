@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Configurações</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>        
+    </head>
+    <body>
+
+        <!-- Selecionar a instância -->
+        <div id="instances-wrapper" >
+
+            <div id="available-instances">
+
+            </div>
+
+            <div id="selected-instances">
+
+            </div>
+
+        </div>
+
+        <!-- Selecionar intervalo de troca de telas -->
+
+        <!-- Editar qual o popid inicial do dia -->
+
+        <!-- Editar nome do colaborador -->
+
+        <!--  -->
+
+        <script src="../js/utils.js"></script>
+
+        <script>
+
+            var selectedInstances = [];
+
+            getInstances();
+
+            function getInstances() {
+                var url = 'http://10.8.66.81:8084/api/instances';
+                request(url, (err, data) => {
+                    let instances = JSON.parse(data);
+                    updateInstancesDiv(instances);
+                });
+            }
+
+            function updateInstancesDiv(instances) {
+                let instancesDiv = document.getElementById('available-instances');
+                instances.map( i => {
+                    let el = document.createElement('div');
+                    el.className = 'instance';
+                    el.textContent = i.Name;
+                    el.onclick = function(e) { addSelectedInstance(i) };
+                    instancesDiv.appendChild(el);                    
+                });
+            }
+
+            function updateSelectedInstancesDiv() {
+
+            }
+
+            function addSelectedInstance(instance) {
+                // Remove instancia de uma lista e passa para outra
+                selectedInstances.push(instance);
+            }
+
+            function startApplication() {
+                
+            }
+
+        
+        </script>
+    
+    </body>
+
+</html>

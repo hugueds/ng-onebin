@@ -1,0 +1,32 @@
+[
+    {
+        "Id": 0,
+        "Name": "Pneus",
+        "Station": 30,
+        "PartName": "Pneus",
+        "PartNumbers": ["123", "456", "789"],
+        "PartQuantity" : 10,
+        "PartsInStation" : 10,
+        "TaktInstanceId": 3
+    },
+    {
+        "Id": 1,
+        "Name": "Bogie",
+        "Station": 0,
+        "PartName": "Bogie",
+        "PartNumbers": [],
+        "PartQuantity" : 10,
+        "PartsInStation" : 10,
+        "TaktInstanceId": 0
+    },
+    {
+        "Id": 2,
+        "Name": "Molas",
+        "Station": 0,
+        "PartName": "Molas",
+        "PartNumbers": [],
+        "PartQuantity" : 10,
+        "PartsInStation" : 10,
+        "TaktInstanceId": 0
+    }
+]

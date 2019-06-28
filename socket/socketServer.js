@@ -1,54 +1,49 @@
-module.exports = function (server) {
+let ioServer = null;
 
-    const io = require('socket.io')(server);
-    const Message = require('../models/MessageSchema');
-    const client = require('../socket/socketClient');
+module.exports = {
+    start: function (httpServer) {
 
-    var lastProduced = 0;
+        const io = require('socket.io')(httpServer);
+        const Message = require('../models/MessageSchema');
+        const client = require('../socket/socketClient');
+        const request = require('request');
 
-    io.on('connection', (socket) => {
+        let lastProduced = 0;        
 
-        console.log("A CLIENT HAS CONNECTED");
+        io.on('connection', (socket) => {
 
-        socket.on('get messages', async (data) => {
-            try {
-                let res = await Message.find({});
-                socket.emit('messages', res);
-            }
-            catch (err) {
-                console.error(err);
-            }
+            socket.on('get mix', (data) => {
+
+            })
+
+            socket.on('get entrance', (data) => {
+
+            })
+
+            socket.on('', (data) => {
+
+            })
+
+            socket.on('', (data) => {
+
+            })
+
+            socket.on('', (data) => {
+
+            })
+
         });
 
-        socket.on('deliver', async (part) => {            
-            try {
-                let res = await Message.findByIdAndRemove(part._id);
-                console.log(res);
-                socket.emit('get messages');
-            }catch(err){
-                console.error(err);
-            }
+        ioServer = io;        
+    },
+    io : function() {
+        return ioServer;
+    }
 
-        })
-
-        socket.on('new product', () => console.log('Novo produto no posto'))
-
-    });      
-
-    setInterval(() => client.emit('takt-instance', 0), 5000)
-    setInterval(() => client.emit('takt-instance', 0), 5000)
-
-    client.on('server-takt-instance', (data) => {
-        if (lastProduced < data.production){
-         
-        }        
-        
-        lastProduced = data.production;
-    })
 
 };
 
-//Quando um novo produto chega
-//debita-se a quantidade de peças para aquele produto ( com excessão do posto 1 que so atualizara ao receber um novo produto)
-//Verifica a sequencia da fila
+// Quando um novo produto chega
+// Debita-se a quantidade de peças para aquele produto ( com excessão do posto 1 que so atualizara ao receber um novo produto)
+// Verifica a sequencia da fila
 

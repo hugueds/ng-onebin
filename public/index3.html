@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ONE BIN</title>
+</head>
+
+<body>
+
+    <script>
+
+        var instance = null;
+
+        window.onload = function () {
+            console.log('Iniciando pagina');            
+            instance = localStorage.getItem('instance');
+            if (instance == null) {
+                location.href = '/config';
+            }
+            console.log(instance);
+        }
+
+
+    </script>
+</body>
+
+</html>
